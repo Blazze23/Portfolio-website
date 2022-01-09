@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Portfolio website of front-end developer",
+  "main": "main.js",
+  "scripts": {
+    "start": "index.html"
+  },
+  "keywords": [
+    "front-end dev",
+    "frontend developer",
+    "frontend web developer"
+  ],
+  "author": "Lazar Marinkovic",
+  "license": "ISC"
+}

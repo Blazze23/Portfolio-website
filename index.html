@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevLazar Portfolio Website</title>
+
+    <!-- MY STYLES -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Fontawesome  ICONS-->
+    <script
+      src="https://kit.fontawesome.com/112c77d41f.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!-- MAIN JavaScript -->
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <nav class="nav">
+        <div class="logo">
+          <a href="#home" class="logo__link">
+            <img
+              src="/assets/logo.svg"
+              alt="Logo"
+              title="Logo"
+              class="logo__img"
+            />
+          </a>
+        </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link">
+                <i class="fas fa-home nav__icon"></i>
+                Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#services" class="nav__link">
+                <i class="fas fa-laptop-code nav__icon"></i>
+                My Services
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">
+                <i class="fas fa-user nav__icon"></i>
+                About me
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class="fas fa-file-code nav__icon"></i>
+                Skills
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#portfolio" class="nav__link">
+                <i class="fas fa-briefcase nav__icon"></i>
+                Portfolio
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">
+                <i class="fas fa-envelope nav__icon"></i>
+                Contact
+              </a>
+            </li>
+          </ul>
+          <i class="fas fa-times nav__close" id="nav-close"></i>
+        </div>
+        <div class="nav__btns">
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="fas fa-th-large"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro" id="home">
+      <h1 class="section__title section__title-intro">
+        Hi, I am <strong>Lazar Marinkovic</strong>
+      </h1>
+      <p class="section__subtitle section__subtitle-intro">
+        front-end developer
+      </p>
+      <img
+        src="/assets/profile.jpg"
+        alt="profile picture of Lazar"
+        title="profile image"
+        class="intro__img"
+      />
+    </section>
+
+    <!-- My Services -->
+    <section class="my-services" id="services">
+      <h2 class="section__title section__title-services">What I do</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Development</h3>
+          <p>
+            I create all kinds of profesional websites and web applications
+            using modern development technologies HTML, CSS, JavaScript and
+            front-end frameworks (Angular & React).
+          </p>
+        </div>
+        <div class="service">
+          <h3>Design</h3>
+          <p>
+            I create fully responsive, modern looking, accessible, user-friendly
+            designs for your websites and web applications in Figma.
+          </p>
+        </div>
+        <div class="service">
+          <h3>Deployment + Maintenance</h3>
+          <p>
+            Besides design and development, I also deploy websites and web apps
+            to the web servers and maintain them, including making changes upon
+            request.
+          </p>
+        </div>
+      </div>
+      <a href="#portfolio" class="btn btn__portfolio">Portfolio</a>
+    </section>
+
+    <!-- About me -->
+    <section class="about-me" id="about">
+      <h2 class="section__title section__title-about">Who I am</h2>
+      <p class="section__subtitle section__subtitle-about">
+        front-end dev from Belgrade, Serbia
+      </p>
+
+      <div class="about-me-body">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero,
+          beatae omnis eligendi unde accusamus aspernatur deleniti, fuga at
+          voluptatem atque pariatur molestias quis laborum enim earum sapiente
+          similique eos temporibus.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius non
+          dolorem esse, fuga a iure exercitationem animi aspernatur tempora
+          explicabo delectus. Numquam, vero nisi quam eum deserunt delectus
+          minima culpa?
+        </p>
+      </div>
+      <div class="about-me__img-div">
+        <img
+          src="/assets/bw-profile.jpg"
+          alt="black and white picture of Lazar"
+          title="black and white profile image"
+          class="about-me__img"
+        />
+      </div>
+
+      <div class="download-cv">
+        <a href="#" class="btn btn__cv">
+          <i class="fas fa-cloud-download-alt"></i>
+          Download CV</a
+        >
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+      <div class="skills__container">
+        <h2 class="section__title section__title-skills">Dev skills</h2>
+        <p class="section__subtitle section__subtitle-skills">
+          My tehnical level
+        </p>
+
+        <div class="skills__body">
+          <ul class="skills__list">
+            <!-- Skill 1 -->
+            <li class="skill__item">
+              <h3 class="skill__name">
+                <i class="fab fa-html5 skill__icon"></i>
+                HTML
+              </h3>
+
+              <p class="skill__number">90%</p>
+              <div class="skill__bar">
+                <span class="skill__percentage skill__html"></span>
+              </div>
+            </li>
+            <!-- Skill 2 -->
+            <li class="skill__item">
+              <h3 class="skill__name">
+                <i class="fab fa-css3-alt skill__icon"></i>
+                CSS
+              </h3>
+
+              <p class="skill__number">85%</p>
+              <div class="skill__bar">
+                <span class="skill__percentage skill__css"></span>
+              </div>
+            </li>
+            <!-- Skill 3 -->
+            <li class="skill__item">
+              <h3 class="skill__name">
+                <i class="fab fa-js-square skill__icon"></i>
+                JavaScript
+              </h3>
+
+              <p class="skill__number">80%</p>
+              <div class="skill__bar">
+                <span class="skill__percentage skill__js"></span>
+              </div>
+            </li>
+            <!-- Skill 4 -->
+            <li class="skill__item">
+              <h3 class="skill__name">
+                <i class="fab fa-bootstrap skill__icon"></i>
+                Bootstrap
+              </h3>
+
+              <p class="skill__number">90%</p>
+              <div class="skill__bar">
+                <span class="skill__percentage skill__bootstrap"></span>
+              </div>
+            </li>
+            <!-- Skill 5 -->
+            <li class="skill__item">
+              <h3 class="skill__name">
+                <i class="fas fa-code skill__icon"></i>
+                Typescript
+              </h3>
+
+              <p class="skill__number">70%</p>
+              <div class="skill__bar">
+                <span class="skill__percentage skill__ts"></span>
+              </div>
+            </li>
+            <!-- Skill 6 -->
+            <li class="skill__item">
+              <h3 class="skill__name">
+                <i class="fab fa-git-alt skill__icon"></i>
+                Git
+              </h3>
+
+              <p class="skill__number">100%</p>
+              <div class="skill__bar">
+                <span class="skill__percentage skill__git"></span>
+              </div>
+            </li>
+            <!-- Skill 7 -->
+            <li class="skill__item">
+              <h3 class="skill__name">
+                <i class="fab fa-angular skill__icon"></i>
+                Angular
+              </h3>
+
+              <p class="skill__number">60%</p>
+              <div class="skill__bar">
+                <span class="skill__percentage skill__angular"></span>
+              </div>
+            </li>
+            <!-- Skill 8 -->
+            <li class="skill__item">
+              <h3 class="skill__name">
+                <i class="fab fa-react skill__icon"></i>
+                React
+              </h3>
+
+              <p class="skill__number">10%</p>
+              <div class="skill__bar">
+                <span class="skill__percentage skill__react"></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="my-portfolio" id="portfolio">
+      <h2 class="section__title section__title-portfolio">Portfolio</h2>
+      <p class="section__subtitle section__subtitle-portfolio">
+        A selection of some of my projects
+      </p>
+
+      <div class="portfolio">
+        <!-- Project-1 -->
+        <a href="#" class="portfolio__item"
+          ><img
+            src="http://placehold.it/600x600"
+            alt=""
+            class="portfolio__img" /></a
+        ><!-- Project-2 -->
+        <a href="#" class="portfolio__item"
+          ><img
+            src="http://placehold.it/600x600"
+            alt=""
+            class="portfolio__img" /></a
+        ><!-- Project-3 -->
+        <a href="#" class="portfolio__item"
+          ><img
+            src="http://placehold.it/600x600"
+            alt=""
+            class="portfolio__img" /></a
+        ><!-- Project-4 -->
+        <a href="#" class="portfolio__item"
+          ><img
+            src="http://placehold.it/600x600"
+            alt=""
+            class="portfolio__img" /></a
+        ><!-- Project-5 -->
+        <a href="#" class="portfolio__item"
+          ><img
+            src="http://placehold.it/600x600"
+            alt=""
+            class="portfolio__img" /></a
+        ><!-- Project-6 -->
+        <a href="#" class="portfolio__item"
+          ><img src="http://placehold.it/600x600" alt="" class="portfolio__img"
+        /></a>
+      </div>
+    </section>
+
+    <!-- Contact Me -->
+    <section class="contact" id="contact">
+      <h2 class="section__title">Contact me</h2>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <a href="mailto:l.azmar23@gmail.com" class="footer__link"
+        >l.azmar23@gmail.com</a
+      >
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a
+            href="https://linkedin.com"
+            class="social-list__link"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin-in fa-2x social-list__icon"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            href="https://github.com"
+            class="social-list__link"
+            target="_blank"
+          >
+            <i class="fab fa-github fa-2x social-list__icon"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            href="https://facebook.com"
+            class="social-list__link"
+            target="_blank"
+          >
+            <i class="fab fa-facebook-f fa-2x social-list__icon"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
