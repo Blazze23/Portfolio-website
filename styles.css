@@ -49,6 +49,18 @@ html {
   scroll-behavior: smooth;
 }
 
+/* SCROLL BAR */
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--clr-accent-light);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-accent);
+  border-radius: 0.5rem;
+}
+
 body {
   background: var(--clr-light);
   color: var(--clr-dark);
@@ -141,7 +153,8 @@ h3 {
 
 .section__subtitle-intro,
 .section__subtitle-about,
-.section__subtitle-skills {
+.section__subtitle-skills,
+.section__subtitle-contact {
   background: var(--clr-accent);
   padding: 0.25em 1em;
   font-family: var(--ff-code);
@@ -246,6 +259,9 @@ nav {
 }
 
 @media (min-width: 801px) {
+  body {
+    margin-bottom: 0;
+  }
   .header {
     top: 0;
     bottom: initial;
@@ -596,12 +612,75 @@ nav {
 
 /* CONTACT SECTION */
 .contact {
-  background-color: var(--clr-light);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact__info {
+  display: grid;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 550px) {
+  .contact__info {
+    /* display: flex;
+    justify-content: space-around;
+    padding: 0 1.5rem 0; */
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact__info-phone,
+  .contact__info-email {
+    justify-content: center;
+  }
+}
+
+.contact__info-phone,
+.contact__info-email {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75em;
+}
+
+.contact__icon {
+  font-size: var(--fs-h3);
+}
+
+.form__group {
+  background-color: var(--clr-light-2);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 1.5rem;
+}
+
+.contact__label {
+  font-size: 0.85rem;
+}
+
+.contact__input {
+  font-family: var(--ff-code);
+  font-size: var(--fs-h3);
+  width: 100%;
+  background-color: var(--clr-light-2);
+  padding: 0.25rem 0.5rem 0.5rem 0;
+  outline: none;
+  border: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  margin: 3.5rem auto 0;
 }
 
 /* FOOTER */
 .footer {
-  background-color: var(--clr-accent-2);
+  background-color: var(--clr-dark);
   color: var(--clr-accent);
   text-align: center;
   padding: 2.5em 0;
