@@ -17,7 +17,7 @@ if (navClose) {
 }
 
 navMenu.addEventListener("click", (e) => {
-  e.preventDefault();
+  //   e.preventDefault();
 
   if (e.target.classList.contains("nav__link")) {
     const id = e.target.getAttribute("href");
