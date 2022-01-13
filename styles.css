@@ -242,6 +242,10 @@ nav {
   color: var(--clr-accent);
 }
 
+.nav__link-active {
+  color: var(--clr-accent);
+}
+
 .nav__icon {
   font-size: 1.2rem;
 }

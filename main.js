@@ -3,6 +3,7 @@
 const navMenu = document.getElementById("nav-menu");
 const navToggle = document.getElementById("nav-toggle");
 const navClose = document.getElementById("nav-close");
+const navLinks = document.querySelectorAll(".nav__link");
 
 if (navToggle) {
   navToggle.addEventListener("click", () => {
@@ -17,11 +18,13 @@ if (navClose) {
 }
 
 navMenu.addEventListener("click", (e) => {
-  //   e.preventDefault();
-
+  navLinks.forEach((link) => {
+    link.classList.remove("nav__link-active");
+  });
   if (e.target.classList.contains("nav__link")) {
     const id = e.target.getAttribute("href");
     document.querySelector(id).scrollIntoView();
+    e.target.classList.add("nav__link-active");
     navMenu.classList.remove("show__nav-menu");
   }
 });
