@@ -193,7 +193,7 @@ nav {
 
 .nav__toggle {
   color: var(--clr-accent-2);
-  font-size: var(--fs-h3);
+  font-size: 1.75rem;
   cursor: pointer;
 }
 
