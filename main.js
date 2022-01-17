@@ -44,6 +44,8 @@ const sectionObserver = function (entries) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
 
+  console.log(entry);
+
   navLinks.forEach((link) => {
     link.classList.remove("nav__link-active");
     const linkID = link.getAttribute("href").slice(1);
@@ -54,7 +56,8 @@ const sectionObserver = function (entries) {
 };
 
 const observer = new IntersectionObserver(sectionObserver, {
-  threshold: 0.7,
+  threshold: 0.5,
+  rootMargin: "100px",
 });
 
 allSections.forEach((section) => {
