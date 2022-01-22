@@ -626,6 +626,10 @@ nav {
   margin-bottom: 1rem;
 }
 
+.contact__info a {
+  color: #0e3854;
+}
+
 @media (min-width: 550px) {
   .contact__info {
     /* display: flex;

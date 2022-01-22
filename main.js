@@ -8,23 +8,25 @@ const navClose = document.getElementById("nav-close");
 const navLinks = document.querySelectorAll(".nav__link");
 const allSections = document.querySelectorAll("section");
 
+// Toggling navigation on mobile
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     navMenu.classList.add("show__nav-menu");
   });
 }
 
+// Closing navigation on mobile
 if (navClose) {
   navClose.addEventListener("click", () => {
     navMenu.classList.remove("show__nav-menu");
   });
 }
 
+// Adding scrolling functionality to sections
 navList.addEventListener("click", (e) => {
   navLinks.forEach((link) => {
     link.classList.remove("nav__link-active");
   });
-  console.log(e.target);
 
   //   When we click on links
   if (e.target.classList.contains("nav__link")) {
@@ -40,11 +42,10 @@ navList.addEventListener("click", (e) => {
   }
 });
 
+// Setting sections observer for adding link active class on current section
 const sectionObserver = function (entries) {
   const [entry] = entries;
   if (!entry.isIntersecting) return;
-
-  console.log(entry);
 
   navLinks.forEach((link) => {
     link.classList.remove("nav__link-active");
@@ -74,3 +75,5 @@ if (window.screen.width < 700) {
     observerLargeDevices.observe(section);
   });
 }
+
+// TODO Form Validation
