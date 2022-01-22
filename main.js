@@ -55,11 +55,22 @@ const sectionObserver = function (entries) {
   });
 };
 
-const observer = new IntersectionObserver(sectionObserver, {
-  threshold: 0.58,
-  rootMargin: "150px 0px -150px",
+const observerSmallDevices = new IntersectionObserver(sectionObserver, {
+  threshold: 0.3,
+  rootMargin: "120px 0px -80px",
 });
 
-allSections.forEach((section) => {
-  observer.observe(section);
+const observerLargeDevices = new IntersectionObserver(sectionObserver, {
+  threshold: 0.8,
+  rootMargin: "120px 0px -80px",
 });
+
+if (window.screen.width < 700) {
+  allSections.forEach((section) => {
+    observerSmallDevices.observe(section);
+  });
+} else {
+  allSections.forEach((section) => {
+    observerLargeDevices.observe(section);
+  });
+}
