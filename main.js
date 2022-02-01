@@ -76,4 +76,73 @@ if (window.screen.width < 700) {
   });
 }
 
-// TODO Form Validation
+// Form Validation
+const form = document.getElementById("contact-form");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const subjectInput = document.getElementById("subject");
+const messageInput = document.querySelector(".message__area");
+
+// Setting Error message and class
+const setErrorFor = function (input, message) {
+  const formGroup = input.parentElement;
+  const errorMessage = formGroup.querySelector(".error__message");
+
+  errorMessage.innerText = message;
+  formGroup.classList.remove("success");
+  formGroup.classList.add("error");
+};
+
+// Setting Success class
+const setSuccessFor = function (input) {
+  const formGroup = input.parentElement;
+  formGroup.classList.remove("error");
+  formGroup.classList.add("success");
+};
+
+// Check if email is valid
+const isEmail = function (email) {
+  return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email);
+};
+
+// Check input fields
+const inputChecker = function () {
+  const nameValue = nameInput.value.trim();
+  const emailValue = emailInput.value.trim();
+  const subjectValue = subjectInput.value.trim();
+  const messageValue = messageInput.value.trim();
+
+  if (nameValue === "" || nameValue == null) {
+    setErrorFor(nameInput, "Please enter your name");
+    console.log(messageValue);
+  } else {
+    setSuccessFor(nameInput);
+  }
+
+  if (emailValue === "" || emailValue == null) {
+    setErrorFor(emailInput, "Please enter your email");
+  } else if (!isEmail(emailValue)) {
+    setErrorFor(emailInput, "Email is not valid");
+  } else {
+    setSuccessFor(emailInput);
+  }
+
+  if (subjectValue === "" || subjectValue == null) {
+    setErrorFor(subjectInput, "Please enter subject");
+  } else {
+    setSuccessFor(subjectInput);
+  }
+
+  if (messageValue === "" || messageValue == null) {
+    setErrorFor(messageInput, "Please enter your message");
+  } else {
+    setSuccessFor(messageInput);
+  }
+};
+
+// Submit form
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  inputChecker();
+});

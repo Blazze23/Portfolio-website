@@ -132,21 +132,25 @@
     <section class="about-me" id="about">
       <h2 class="section__title section__title-about">Who I am</h2>
       <p class="section__subtitle section__subtitle-about">
-        front-end dev from Belgrade, Serbia
+        Front-end dev from Belgrade, Serbia
       </p>
 
       <div class="about-me-body">
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero,
-          beatae omnis eligendi unde accusamus aspernatur deleniti, fuga at
-          voluptatem atque pariatur molestias quis laborum enim earum sapiente
-          similique eos temporibus.
+          Even though I have bachelor's degree in economics, I found myself
+          falling in love with web development. Building state-of-the-art, easy
+          to use, user-friendly websites and web applications became truly a
+          passion of mine. Every time I come accross a good looking website or
+          app, I get inspired to recreate it or to come up with similar design
+          of my own.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius non
-          dolorem esse, fuga a iure exercitationem animi aspernatur tempora
-          explicabo delectus. Numquam, vero nisi quam eum deserunt delectus
-          minima culpa?
+          I have a keen eye for clean and modern design, and the ability to
+          efficiently code websites and web applications using modern HTML, CSS
+          and JavaScript as well as using Angular framework. I am dedicated and
+          committed to improving my developing skills and learning new
+          technologies, so that I can keep producing clean, elegant and
+          efficient code.
         </p>
       </div>
       <div class="about-me__img-div">
@@ -159,7 +163,11 @@
       </div>
 
       <div class="download-cv">
-        <a href="#" class="btn btn__cv">
+        <a
+          href="/assets/Lazar Marinkovic CV eng.pdf"
+          class="btn btn__cv"
+          target="_blank"
+        >
           <i class="fas fa-cloud-download-alt"></i>
           Download CV</a
         >
@@ -286,38 +294,65 @@
 
       <div class="portfolio">
         <!-- Project-1 -->
-        <a href="#" class="portfolio__item"
+        <a
+          href="https://custompiggame.netlify.app/"
+          class="portfolio__item"
+          target="_blank"
           ><img
-            src="/assets/aboutme-cover.jpg"
-            alt=""
+            src="/assets/piggame.jpg"
+            alt="pig game"
+            title="pig game application"
             class="portfolio__img" /></a
         ><!-- Project-2 -->
-        <a href="#" class="portfolio__item"
+        <a
+          href="https://thiverycorporation.netlify.app/"
+          class="portfolio__item"
+          target="_blank"
           ><img
-            src="/assets/aboutme-cover.jpg"
-            alt=""
+            src="/assets/thiverycorporation.jpg"
+            alt="thivery corporation fan made website"
+            title="thivery corporation fan made website"
             class="portfolio__img" /></a
         ><!-- Project-3 -->
-        <a href="#" class="portfolio__item"
+        <a
+          href="https://mdbtimeteller.netlify.app/"
+          class="portfolio__item"
+          target="_blank"
           ><img
-            src="/assets/aboutme-cover.jpg"
-            alt=""
+            src="/assets/timeteller.jpg"
+            alt="clock application"
+            title="analog and digital clock application"
             class="portfolio__img" /></a
         ><!-- Project-4 -->
-        <a href="#" class="portfolio__item"
+        <a
+          href="https://clean-commerce.rs/"
+          class="portfolio__item"
+          target="_blank"
           ><img
-            src="/assets/aboutme-cover.jpg"
-            alt=""
+            src="/assets/cleancommerce.jpg"
+            alt="clean-commerce website"
+            title="clean-commerce website"
             class="portfolio__img" /></a
         ><!-- Project-5 -->
-        <a href="#" class="portfolio__item"
+        <a
+          href="https://customomdb.netlify.app/"
+          class="portfolio__item"
+          target="_blank"
           ><img
-            src="/assets/aboutme-cover.jpg"
-            alt=""
+            src="/assets/omdb.jpg"
+            alt="open movie database application"
+            title="open movie database application"
             class="portfolio__img" /></a
         ><!-- Project-6 -->
-        <a href="#" class="portfolio__item"
-          ><img src="/assets/aboutme-cover.jpg" alt="" class="portfolio__img"
+        <a
+          href="https://whatsthenumbergame.netlify.app/"
+          class="portfolio__item"
+          target="_blank"
+          ><img
+            src="/assets/whatsmynumber.jpg"
+            alt="what's my number game"
+            title="what's my number game application"
+            class="portfolio__img"
         /></a>
       </div>
     </section>
@@ -356,17 +391,41 @@
         <div class="contact__inputs">
           <div class="form__group">
             <label for="name" class="contact__label">Name</label>
-            <input type="text" class="contact__input" />
+            <input
+              type="text"
+              class="contact__input"
+              id="name"
+              placeholder="Enter your name"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small class="error__message">Error message</small>
           </div>
 
           <div class="form__group">
             <label for="email" class="contact__label">Email</label>
-            <input type="email" class="contact__input" />
+            <input
+              type="email"
+              class="contact__input"
+              id="email"
+              placeholder="Enter your email"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small class="error__message">Error message</small>
           </div>
 
           <div class="form__group">
             <label for="subject" class="contact__label">Subject</label>
-            <input type="subject" class="contact__input" />
+            <input
+              type="subject"
+              class="contact__input"
+              id="subject"
+              placeholder="Enter subject"
+            />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small class="error__message">Error message</small>
           </div>
 
           <div class="form__group">
@@ -376,15 +435,19 @@
               id=""
               cols="0"
               rows="7"
-              class="contact__input"
+              class="contact__input message__area"
+              placeholder="Enter your message"
             ></textarea>
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small class="error__message">Error message</small>
           </div>
 
           <div class="submit">
-            <a href="#" class="btn btn__submit">
+            <button type="submit" class="btn btn__submit">
               <i class="fas fa-paper-plane"></i>
-              Send Message</a
-            >
+              Send Message
+            </button>
           </div>
         </div>
       </form>
