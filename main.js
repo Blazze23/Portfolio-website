@@ -179,5 +179,4 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   inputChecker();
-  // reset();
 });
