@@ -523,7 +523,7 @@ nav {
 }
 
 .skill__js {
-  width: 80%;
+  width: 85%;
 }
 
 .skill__bootstrap {
@@ -531,7 +531,7 @@ nav {
 }
 
 .skill__ts {
-  width: 70%;
+  width: 75%;
 }
 
 .skill__git {
@@ -543,7 +543,7 @@ nav {
 }
 
 .skill__react {
-  width: 50%;
+  width: 80%;
 }
 
 @media (max-width: 500px) {

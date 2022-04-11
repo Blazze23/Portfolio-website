@@ -100,6 +100,26 @@ const setSuccessFor = function (input) {
   formGroup.classList.add("success");
 };
 
+// Reseting all classes
+const setResetFor = function (input) {
+  const formGroup = input.parentElement;
+  formGroup.classList.remove("error");
+  formGroup.classList.remove("success");
+};
+
+// Reseting all inputs and classes
+const reset = function () {
+  nameInput.value = "";
+  emailInput.value = "";
+  subjectInput.value = "";
+  messageInput.value = "";
+
+  setResetFor(nameInput);
+  setResetFor(emailInput);
+  setResetFor(subjectInput);
+  setResetFor(messageInput);
+};
+
 // Check if email is valid
 const isEmail = function (email) {
   return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email);
@@ -111,32 +131,46 @@ const inputChecker = function () {
   const emailValue = emailInput.value.trim();
   const subjectValue = subjectInput.value.trim();
   const messageValue = messageInput.value.trim();
+  let error;
 
   if (nameValue === "" || nameValue == null) {
     setErrorFor(nameInput, "Please enter your name");
-    console.log(messageValue);
+    error = true;
   } else {
     setSuccessFor(nameInput);
+    error = false;
   }
 
   if (emailValue === "" || emailValue == null) {
     setErrorFor(emailInput, "Please enter your email");
+    error = true;
   } else if (!isEmail(emailValue)) {
     setErrorFor(emailInput, "Email is not valid");
+    error = true;
   } else {
     setSuccessFor(emailInput);
+    error = false;
   }
 
   if (subjectValue === "" || subjectValue == null) {
     setErrorFor(subjectInput, "Please enter subject");
+    error = true;
   } else {
     setSuccessFor(subjectInput);
+    error = false;
   }
 
   if (messageValue === "" || messageValue == null) {
     setErrorFor(messageInput, "Please enter your message");
+    error = true;
   } else {
     setSuccessFor(messageInput);
+    error = false;
+  }
+
+  // If everythis is valid form will be reset
+  if (!error) {
+    reset();
   }
 };
 
@@ -145,4 +179,5 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   inputChecker();
+  // reset();
 });
